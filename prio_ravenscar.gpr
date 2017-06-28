@@ -1,0 +1,17 @@
+project Prio_Ravenscar is
+
+   for Source_Dirs use (".", "raven-prio");
+   for Main use ("unit01.adb", "unit03.adb", "unit05.adb");
+
+   package Ide is
+      for Gnat use "leon-elf-gnat";
+      for Gnatlist use "leon-elf-gnatls";
+      for Debugger_Command use "leon-elf-gdb";
+   end Ide;
+
+   package Make is
+      for Makefile use "Makefile";
+   end Make;
+
+end Prio_Ravenscar;
+
